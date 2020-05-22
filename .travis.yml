@@ -27,9 +27,9 @@ script:
   - if [[ "$ANALYSIS" == 'true' ]]; then mkdir -p build/logs && vendor/bin/phpunit --prepend build/xdebug-filter.php --coverage-clover build/logs/clover.xml ; fi
   - if [[ "$ANALYSIS" == 'true' ]]; then vendor/bin/infection --threads=4 ; fi
   - if [[ "$ANALYSIS" == 'true' ]]; then vendor/bin/psalm --shepherd --stats ; fi
-  - if [[ "$ANALYSIS" == 'true' ]]; then composer benchmark ; fi
+  #- if [[ "$ANALYSIS" == 'true' ]]; then composer benchmark ; fi
 
 after_success:
   - if [[ "$ANALYSIS" == 'true' ]]; then php vendor/bin/php-coveralls --coverage_clover=build/logs/clover.xml -v ; fi
-  - if [[ "$ANALYSIS" == 'true' ]]; then wget https://scrutinizer-ci.com/ocular.phar ; fi
-  - if [[ "$ANALYSIS" == 'true' ]]; then php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml ; fi
+  #- if [[ "$ANALYSIS" == 'true' ]]; then wget https://scrutinizer-ci.com/ocular.phar ; fi
+  #- if [[ "$ANALYSIS" == 'true' ]]; then php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml ; fi
