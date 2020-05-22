@@ -1,0 +1,14 @@
+parameters:
+    sets:
+        - 'code-quality'
+        - 'dead-code'
+        - 'coding-style'
+        - 'php-70'
+        - 'php-71'
+        - 'php-72'
+        - 'php-73'
+        - 'php-74'
+        - 'solid'
+    exclude_rectors:
+        - 'Rector\CodingStyle\Rector\Identical\IdenticalFalseToBooleanNotRector'
+        - 'Rector\CodingStyle\Rector\Class_\AddArrayDefaultToArrayPropertyRector'

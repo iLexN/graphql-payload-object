@@ -1,0 +1,73 @@
+{
+    "name": "ilexn/graphql-payload-object",
+    "type": "library",
+    "description": "Simple create graphql payload",
+    "license": "MIT",
+    "keywords": [
+        "graphql"
+    ],
+    "authors": [
+        {
+            "name": "iLexN",
+            "email": "ilex.job@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.27.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "ilexn/keep-a-change-log": "^1.1",
+        "infection/infection": "^0.15.3",
+        "phpbench/phpbench": "@dev",
+        "phpstan/phpstan": "^0.12.14",
+        "phpstan/phpstan-phpunit": "^0.12.6",
+        "phpstan/phpstan-strict-rules": "^0.12.2",
+        "phpunit/phpunit": "^9.0",
+        "rector/rector": "^0.7",
+        "spatie/phpunit-watcher": "^1.22",
+        "symfony/http-client": "^5.0",
+        "symplify/easy-coding-standard": "^7.2",
+        "vimeo/psalm": "^3.9"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Ilex\\GraphqlPayloadObject\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ilex\\GraphqlPayloadObject\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "bug-check": "phpstan analyse -l max src tests",
+        "changelog": "@php dev/create-change-log.php",
+        "ci": [
+            "@ecs",
+            "@test"
+        ],
+        "dev": [
+            "@test",
+            "@cs-check",
+            "@bug-check",
+            "@psalm",
+            "@rector-check"
+        ],
+        "cs-check": "ecs check src",
+        "cs-fix": "ecs check src --fix",
+        "test": "phpunit --testdox",
+        "test-coverage": "phpunit --coverage-text",
+        "test-test": "vendor/bin/infection --threads=4",
+        "test-watch": "phpunit-watcher watch",
+        "test-dump": "phpunit --dump-xdebug-filter ./build/xdebug-filter.php",
+        "rector-check": "rector process src --config rector-ci.yaml --dry-run",
+        "rector-fix": "rector process src --config rector-ci.yaml",
+        "psalm" : "psalm"
+    }
+}
