@@ -56,7 +56,7 @@ $response = $client->request('POST',
     'http://drupal.docker.localhost:8000/graphql/', [
         'body' => $payload->toJson(),
         // or
-        //'json' => $p->toArray(),
+        //'json' => $payload->toArray(),
     ]);
 var_dump($response->toArray());
 
@@ -65,7 +65,7 @@ $client = new GuzzleHttp\Client();
 $response = $client->post('http://drupal.docker.localhost:8000/graphql/', [
     'body' => $payload->toJson(),
     // or
-    //'json' => $p->toArray(),
+    //'json' => $payload->toArray(),
 ]);
 var_dump((string)$response->getBody());
 ```
