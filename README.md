@@ -41,8 +41,6 @@ $payload = \Ilex\GraphqlPayloadObject\Payload::fromString($query, $variables);
 // or from path
 //$payload = \Ilex\GraphqlPayloadObject\Payload::fromPath('example.gql', $variables);
 
-$payload->addVariable('key', 'value');
-
 
 // use the same query , with different variable set
 $newPayload = $payload->withVariable([
