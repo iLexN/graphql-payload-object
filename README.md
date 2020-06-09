@@ -51,7 +51,7 @@ $newPayload = $payload->withVariable([
 // Symfony HttpClient Component
 $client = Symfony\Component\HttpClient\HttpClient::create();
 $response = $client->request('POST',
-    'http://drupal.docker.localhost:8000/graphql/', [
+    'http://example.com/graphql', [
         'body' => $payload->toJson(),
         // or
         //'json' => $payload->toArray(),
@@ -60,7 +60,7 @@ var_dump($response->toArray());
 
 // Guzzle, PHP HTTP client
 $client = new GuzzleHttp\Client();
-$response = $client->post('http://drupal.docker.localhost:8000/graphql/', [
+$response = $client->post('http://example.com/graphql', [
     'body' => $payload->toJson(),
     // or
     //'json' => $payload->toArray(),
