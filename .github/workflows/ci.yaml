@@ -33,7 +33,7 @@ jobs:
       - name: Composer install
         uses: nick-zh/composer-php@master
         with:
-          action: 'update -o'
+          action: 'install'
 
       - name: Execute tests
         run: vendor/bin/phpunit
@@ -58,8 +58,7 @@ jobs:
       - name: Composer install
         uses: nick-zh/composer-php@master
         with:
-          action: 'update'
-          options: '-o'
+          action: 'install'
 
       - name: Code style check
         run: composer cs-check
