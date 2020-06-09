@@ -46,15 +46,6 @@ final class Payload
     }
 
     /**
-     * @param string $key
-     * @param mixed $value
-     */
-    public function addVariable(string $key, $value): void
-    {
-        $this->variables[$key] = $value;
-    }
-
-    /**
      * @param array<string,mixed> $variables
      *
      * @return self

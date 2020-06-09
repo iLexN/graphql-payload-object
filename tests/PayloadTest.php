@@ -40,23 +40,6 @@ final class PayloadTest extends TestCase
         self::assertEquals($expected, $payload->toArray());
     }
 
-    public function testAddVariable(): void
-    {
-        $query = 'query';
-        $variables = [
-            'a' => 'a',
-        ];
-        $payload = Payload::fromString($query, $variables);
-
-        $payload->addVariable('b', 'b');
-
-        $expected = [
-            'query' => $query,
-            'variables' => ['a' => 'a', 'b' => 'b'],
-        ];
-        self::assertEquals($expected, $payload->toArray());
-    }
-
     public function testWithVariable(): void
     {
         $query = 'query';
