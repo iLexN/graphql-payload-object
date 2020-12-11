@@ -1,8 +1,7 @@
 Escaped mutants:
 ================
 
-
-1) /shared/httpd/graphql-payload-object/src/Payload.php:82    [M] FalseValue
+1) /shared/httpd/graphql-payload-object/src/Payload.php:73    [M] FalseValue
 
 --- Original
 +++ New
@@ -16,12 +15,15 @@ Escaped mutants:
          }
          return new self($query, $variables);
 
+
 Timed Out mutants:
 ==================
 
+Skipped mutants:
+================
+
 Not Covered mutants:
 ====================
-
 
 1) /shared/httpd/graphql-payload-object/src/Error.php:16    [M] PublicVisibility
 
@@ -37,8 +39,10 @@ Not Covered mutants:
          $message = sprintf('Load file fail: %s', $path);
          return new self($message);
      }
+ }
 
-2) /shared/httpd/graphql-payload-object/src/Payload.php:83    [M] Throw_
+
+2) /shared/httpd/graphql-payload-object/src/Payload.php:74    [M] Throw_
 
 --- Original
 +++ New
