@@ -62,8 +62,8 @@ jobs:
       - name: Composer install
         run: composer install --ansi
 
-      - name: Code style check
-        run: composer cs-check
+#      - name: Code style check
+#        run: composer cs-check
 
       - name: PhpStan check
         run: composer bug-check
