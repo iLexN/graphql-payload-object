@@ -18,22 +18,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-#      - name: Cache composer dependencies
-#        uses: actions/cache@v1
-#        with:
-#          path: ~/.composer/cache
-#          key: composer-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+      - name: Cache composer dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache
+          key: composer-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v1
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           coverage: none
 
       - name: Composer install
-        uses: nick-zh/composer-php@master
-        with:
-          action: 'install'
+        run: composer install --ansi
 
       - name: Execute tests
         run: vendor/bin/phpunit
@@ -49,16 +47,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Cache composer dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache
+          key: composer-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+
       - name: Setup PHP
-        uses: shivammathur/setup-php@v1
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           coverage: none
 
       - name: Composer install
-        uses: nick-zh/composer-php@master
-        with:
-          action: 'install'
+        run: composer install --ansi
 
       - name: Code style check
         run: composer cs-check
@@ -71,3 +73,6 @@ jobs:
 
       - name: Rector check
         run: composer rector-check
+
+      - name: Infection check
+        run: vendor/bin/infection --threads=4
