@@ -22,7 +22,7 @@
         "ilexn/keep-a-change-log": "^1.1",
         "infection/infection": "^0.20",
         "phpbench/phpbench": "@dev",
-        "phpstan/phpstan": "^0.12.59",
+        "phpstan/phpstan": "^0.12.62",
         "phpstan/phpstan-phpunit": "^0.12.6",
         "phpstan/phpstan-strict-rules": "^0.12.2",
         "phpunit/phpunit": "^9.5",
