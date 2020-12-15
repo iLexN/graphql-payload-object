@@ -4,7 +4,6 @@
 [![Latest Stable Version](https://poser.pugx.org/ilexn/graphql-payload-object/v/stable)](https://packagist.org/packages/ilexn/graphql-payload-object)
 [![Total Downloads](https://poser.pugx.org/ilexn/graphql-payload-object/downloads)](https://packagist.org/packages/ilexn/graphql-payload-object)
 
-[![Build Status](https://travis-ci.org/iLexN/graphql-payload-object.svg?branch=master)](https://travis-ci.org/iLexN/graphql-payload-object)
 ![GitHub Action](https://github.com/iLexN/graphql-payload-object/workflows/CI%20Check/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/iLexN/graphql-payload-object/badge.svg?branch=master)](https://coveralls.io/github/iLexN/graphql-payload-object?branch=master)
 [![Infection MSI](https://badge.stryker-mutator.io/github.com/iLexN/graphql-payload-object/master)](https://infection.github.io)
