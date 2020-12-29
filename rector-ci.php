@@ -15,10 +15,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::DEAD_CODE,
         SetList::CODING_STYLE,
         SetList::PHP_74,
-        SetList::SOLID,
     ]);
 
-    $parameters->set('exclude_rectors', [
+    $parameters->set(Option::SKIP, [
         AddArrayDefaultToArrayPropertyRector::class,
     ]);
 
