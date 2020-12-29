@@ -6,12 +6,6 @@ namespace Ilex\GraphqlPayloadObject;
 
 final class Payload
 {
-    private string $query;
-
-    /**
-     * @var array<string,mixed>
-     */
-    private array $variables;
 
     /**
      * Payload constructor.
@@ -19,10 +13,11 @@ final class Payload
      * @param string $query
      * @param array<string,mixed> $variables
      */
-    private function __construct(string $query, array $variables = [])
+    private function __construct(
+        private string $query,
+        private array $variables = []
+    )
     {
-        $this->query = $query;
-        $this->variables = $variables;
     }
 
     /**

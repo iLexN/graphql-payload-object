@@ -14,7 +14,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::CODE_QUALITY,
         SetList::DEAD_CODE,
         SetList::CODING_STYLE,
-        SetList::PHP_74,
+        SetList::PHP_80,
+        SetList::PSR_4,
     ]);
 
     $parameters->set(Option::SKIP, [
