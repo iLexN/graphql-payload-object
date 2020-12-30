@@ -72,6 +72,7 @@ final class PayloadTest extends TestCase
     public function testCreateFromPathFileNotExist(): void
     {
         $this->expectException(Error::class);
+        $this->expectExceptionMessage('File not found');
         $path = 'a.gql';
         Payload::fromPath($path);
     }
@@ -79,6 +80,7 @@ final class PayloadTest extends TestCase
     public function testCreateFromPathFileNotLoad(): void
     {
         $this->expectException(Error::class);
+        $this->expectExceptionMessage('Load file fail');
         $path = __DIR__ .'/test_not_load.gql';
         Payload::fromPath($path);
     }

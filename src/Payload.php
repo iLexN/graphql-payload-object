@@ -64,6 +64,7 @@ final class Payload
         }
 
         //check file path;
+        /** @var string|false $query */
         $query = file_get_contents($path);
         if ($query === false) {
             throw Error::FileNotLoad($path);
