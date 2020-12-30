@@ -42,7 +42,8 @@
     "autoload-dev": {
         "psr-4": {
             "Ilex\\GraphqlPayloadObject\\Tests\\": "tests/"
-        }
+        },
+        "files": ["tests/build_in_function.php"]
     },
     "scripts": {
         "bug-check": "phpstan analyse -l max src tests",

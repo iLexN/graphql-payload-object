@@ -76,6 +76,13 @@ final class PayloadTest extends TestCase
         Payload::fromPath($path);
     }
 
+    public function testCreateFromPathFileNotLoad(): void
+    {
+        $this->expectException(Error::class);
+        $path = 'test_not_load.gql';
+        Payload::fromPath($path);
+    }
+
     public function testCreateFromPathSuccess(): void
     {
         $path = __DIR__ .'/test.gql';
