@@ -1,21 +1,6 @@
 Escaped mutants:
 ================
 
-1) /shared/httpd/graphql-payload-object/src/Payload.php:73    [M] FalseValue
-
---- Original
-+++ New
-@@ @@
-         }
-         //check file path;
-         $query = file_get_contents($path);
--        if ($query === false) {
-+        if ($query === true) {
-             throw Error::FileNotLoad($path);
-         }
-         return new self($query, $variables);
-
-
 Timed Out mutants:
 ==================
 
@@ -24,34 +9,3 @@ Skipped mutants:
 
 Not Covered mutants:
 ====================
-
-1) /shared/httpd/graphql-payload-object/src/Error.php:16    [M] PublicVisibility
-
---- Original
-+++ New
-@@ @@
-         $message = sprintf('File not found: %s', $path);
-         return new self($message);
-     }
--    public static function FileNotLoad(string $path) : self
-+    protected static function FileNotLoad(string $path) : self
-     {
-         $message = sprintf('Load file fail: %s', $path);
-         return new self($message);
-     }
- }
-
-
-2) /shared/httpd/graphql-payload-object/src/Payload.php:74    [M] Throw_
-
---- Original
-+++ New
-@@ @@
-         //check file path;
-         $query = file_get_contents($path);
-         if ($query === false) {
--            throw Error::FileNotLoad($path);
-+            Error::FileNotLoad($path);
-         }
-         return new self($query, $variables);
-     }
