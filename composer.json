@@ -3,9 +3,7 @@
     "type": "library",
     "description": "Simple create graphql payload",
     "license": "MIT",
-    "keywords": [
-        "graphql"
-    ],
+    "keywords": ["graphql"],
     "authors": [
         {
             "name": "iLexN",
@@ -43,7 +41,9 @@
         "psr-4": {
             "Ilex\\GraphqlPayloadObject\\Tests\\": "tests/"
         },
-        "files": ["tests/build_in_function.php"]
+        "files": [
+            "tests/build_in_function.php"
+        ]
     },
     "scripts": {
         "bug-check": "phpstan analyse -l max src tests",
@@ -68,6 +68,6 @@
         "test-dump": "phpunit --dump-xdebug-filter ./build/xdebug-filter.php",
         "rector-check": "rector process src --config rector-ci.php --dry-run",
         "rector-fix": "rector process src --config rector-ci.php",
-        "psalm" : "psalm"
+        "psalm": "psalm"
     }
 }
