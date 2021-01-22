@@ -16,10 +16,15 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::CODING_STYLE,
         SetList::PHP_80,
         SetList::PSR_4,
+        SetList::CODE_QUALITY_STRICT,
+        SetList::EARLY_RETURN,
+        SetList::PERFORMANCE,
+        SetList::NAMING,
     ]);
 
     $parameters->set(Option::SKIP, [
         AddArrayDefaultToArrayPropertyRector::class,
+        Rector\Php80\Rector\FunctionLike\UnionTypesRector::class
     ]);
 
 };
