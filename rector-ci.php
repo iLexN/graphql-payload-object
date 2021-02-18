@@ -18,7 +18,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::PSR_4,
         SetList::CODE_QUALITY_STRICT,
         SetList::EARLY_RETURN,
-        SetList::PERFORMANCE,
+        //SetList::PERFORMANCE,
         SetList::NAMING,
     ]);
 
