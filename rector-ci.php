@@ -24,7 +24,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::SKIP, [
         AddArrayDefaultToArrayPropertyRector::class,
-        Rector\Php80\Rector\FunctionLike\UnionTypesRector::class
+        Rector\Php80\Rector\FunctionLike\UnionTypesRector::class,
+        Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector::class,
+        Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector::class,
     ]);
 
 };
