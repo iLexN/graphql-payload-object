@@ -10,17 +10,14 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(Option::SETS, [
-        SetList::CODE_QUALITY,
-        SetList::DEAD_CODE,
-        SetList::CODING_STYLE,
-        SetList::PHP_80,
-        SetList::PSR_4,
-        SetList::CODE_QUALITY_STRICT,
-        SetList::EARLY_RETURN,
-        //SetList::PERFORMANCE,
-        SetList::NAMING,
-    ]);
+    $containerConfigurator->import(SetList::CODE_QUALITY);
+    $containerConfigurator->import(SetList::DEAD_CODE);
+    $containerConfigurator->import(SetList::CODING_STYLE);
+    $containerConfigurator->import(SetList::PHP_80);
+    $containerConfigurator->import(SetList::PSR_4);
+    $containerConfigurator->import(SetList::CODE_QUALITY_STRICT);
+    $containerConfigurator->import(SetList::EARLY_RETURN);
+    $containerConfigurator->import(SetList::NAMING);
 
     $parameters->set(Option::SKIP, [
         AddArrayDefaultToArrayPropertyRector::class,
