@@ -15,7 +15,7 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "codedungeon/phpunit-result-printer": "^0.30.1",
+        "codedungeon/phpunit-result-printer": "^0.31.0",
         "guzzlehttp/guzzle": "^7.3",
         "ilexn/keep-a-change-log": "^1.3",
         "infection/infection": "^0.24",
