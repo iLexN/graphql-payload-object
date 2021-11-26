@@ -14,8 +14,8 @@ final class Payload
      * @param array<string,mixed> $variables
      */
     private function __construct(
-        private string $query,
-        private array $variables = []
+        private readonly string $query,
+        private readonly array $variables = []
     )
     {
     }
@@ -57,7 +57,7 @@ final class Payload
      * @return self
      * @throws \Ilex\GraphqlPayloadObject\Error
      */
-    public static function fromPath(string $path, $variables = []): self
+    public static function fromPath(string $path, array $variables = []): self
     {
         if (!\file_exists($path)) {
             throw Error::FileNotFound($path);
@@ -78,7 +78,7 @@ final class Payload
      *
      * @return self
      */
-    public static function fromString(string $query, $variables = []): self
+    public static function fromString(string $query, array $variables = []): self
     {
         return new self($query, $variables);
     }
