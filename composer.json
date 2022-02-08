@@ -18,7 +18,7 @@
         "codedungeon/phpunit-result-printer": "^0.31",
         "guzzlehttp/guzzle": "^7.4",
         "ilexn/keep-a-change-log": "^2.0",
-        "infection/infection": "^0.25",
+        "infection/infection": "^0.26",
         "phpbench/phpbench": "^1.2",
         "phpstan/phpstan": "^1.4",
         "phpstan/phpstan-phpunit": "^1.0",
