@@ -10,7 +10,6 @@ final class Payload
     /**
      * Payload constructor.
      *
-     * @param string $query
      * @param array<string,mixed> $variables
      */
     private function __construct(
@@ -51,7 +50,6 @@ final class Payload
     }
 
     /**
-     * @param string $path
      * @param array<string,mixed> $variables
      *
      * @return self
@@ -73,9 +71,7 @@ final class Payload
     }
 
     /**
-     * @param string $query
      * @param array<string,mixed> $variables
-     *
      * @return self
      */
     public static function fromString(string $query, array $variables = []): self
