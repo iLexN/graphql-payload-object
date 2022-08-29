@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.32",
-        "guzzlehttp/guzzle": "^7.4",
+        "guzzlehttp/guzzle": "^7.5",
         "ilexn/keep-a-change-log": "^2.0",
         "infection/infection": "^0.26",
         "phpbench/phpbench": "^1.2",
