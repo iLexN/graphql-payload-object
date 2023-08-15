@@ -3,13 +3,13 @@
   <coverage/>
   <testsuites>
     <testsuite name="Test Suite">
-      <directory suffix=".php">./tests/</directory>
+      <directory suffix="Test.php">./tests/</directory>
       <exclude>./tests/build_in_function.php</exclude>
     </testsuite>
   </testsuites>
   <source>
     <include>
-      <directory suffix="Test.php">src/</directory>
+      <directory suffix=".php">src/</directory>
     </include>
   </source>
 </phpunit>
