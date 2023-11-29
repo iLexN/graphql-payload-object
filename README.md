@@ -6,7 +6,7 @@
 
 ![GitHub Action](https://github.com/iLexN/graphql-payload-object/workflows/CI%20Check/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/iLexN/graphql-payload-object/badge.svg?branch=main)](https://coveralls.io/github/iLexN/graphql-payload-object?branch=main)
-[![Infection MSI](https://badge.stryker-mutator.io/github.com/iLexN/graphql-payload-object/main)](https://infection.github.io)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FiLexN%2Fgraphql-payload-object%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/iLexN/graphql-payload-object/main)
 
 ## Installation
 ```sh
