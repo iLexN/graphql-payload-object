@@ -27,7 +27,7 @@
         "rector/rector": "^1.2.0",
         "spatie/phpunit-watcher": "^1.23.6",
         "symfony/http-client": "^6.4.8",
-        "vimeo/psalm": "^5.24.0"
+        "vimeo/psalm": "^5.25.0"
     },
     "config": {
         "sort-packages": true,
